@@ -15,15 +15,15 @@ You'll see something like this:
 $ yarn build
 yarn build v0.22.0
 $ rm -rf ./build; webpack; node build/main.js; cat build/main.css 
-Hash: 121600edf5fe643ca1ac
+Hash: 1d87cb211b78f570afb0
 Version: webpack 1.15.0
-Time: 681ms
+Time: 552ms
        Asset       Size  Chunks             Chunk Names
-     main.js    2.34 kB       0  [emitted]  main
+     main.js    2.55 kB       0  [emitted]  main
     main.css  283 bytes       0  [emitted]  main
- main.js.map    2.72 kB       0  [emitted]  main
+ main.js.map    3.03 kB       0  [emitted]  main
 main.css.map   85 bytes       0  [emitted]  main
-   [0] ./index.js 387 bytes {0} [built]
+   [0] ./index.js 574 bytes {0} [built]
     + 3 hidden modules
 Child extract-text-webpack-plugin:
         + 6 hidden modules
@@ -38,7 +38,16 @@ Your JS values
 -------- button ----------
 { button: 'button__button button-override-hook' }
 -------- icon ----------
-{ icon: 'icon__icon' }
+{ icon: 'icon__icon cs-override-icon' }
+
+Sample HTML
+
+		<button class="button__button button-override-hook">
+			<span class="icon__icon cs-override-icon">
+				😊
+			</span>
+		</button>
+	
 
 Your CSS
 .button__button {
@@ -46,16 +55,16 @@ Your CSS
   display: inline-block;
   border: 1px solid black;
 }
+.button__button .cs-override-icon {
+  vertical-align: middle;
+}
 .icon__icon {
   display: inline-block;
 }
 .icon__icon svg * {
   fill: currentColor;
 }
-.button-override-hook .icon__icon {
-  vertical-align: middle;
-}
 
-✨  Done in 1.23s.
+✨  Done in 0.98s.
 ```
 
