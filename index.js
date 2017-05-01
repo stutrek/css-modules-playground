@@ -14,4 +14,17 @@ console.log('-------- icon ----------');
 console.log(icon);
 
 console.log('');
+console.log('Sample HTML');
+var sampleHtml = `
+	<button class="${button.button}">
+		<span class="${icon.icon}">
+			😊
+		</span>
+	</button>
+`;
+
+console.log(sampleHtml);
+
+console.log('');
 console.log('Your CSS');
+

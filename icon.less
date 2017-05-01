@@ -1,12 +1,9 @@
 // this comment breaks syntax for css.
 
 .icon {
+	composes: cs-override-icon from global;
  	display: inline-block;
 }
 .icon svg * {
 	fill: currentColor;
-}
-
-:global(.button-override-hook) .icon {
-	vertical-align: middle;
 }
