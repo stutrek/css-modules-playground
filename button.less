@@ -2,9 +2,9 @@
 
 .button {
 	composes: button-override-hook from global;
-	background-color: #99f;
+	composes: blue-text white-background from './main.less';
 	display: inline-block;
-	border: 1px solid black;	
+	border: 1px solid black;
 }
 
 .button :global(.cs-override-icon) {
